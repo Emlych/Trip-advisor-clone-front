@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- import css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Import icons -->
+    <script src="https://kit.fontawesome.com/bb54014cd5.js"></script>
+
+    <!-- Import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Import js file -->
+    <script src="./assets/js/modal.js"></script>
+
+    <title>Tourisme à Singapour 2022 : Visiter Singapour</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img
+          src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="tripadvisor logo"
+        />
+        <nav>
+          <div class="menu">
+            <i class="fas fa-pen"></i>
+            <p>Avis</p>
+          </div>
+          <div class="menu">
+            <i class="far fa-heart"></i>
+            <p>Voyages</p>
+          </div>
+          <div class="menu">
+            <i class="far fa-bell"></i>
+            <p>Alertes</p>
+          </div>
+          <button id="open-modal">Connectez-vous</button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="modal" id="modal">
+      <div class="modal-content" id="modal-content">
+        <span class="close" id="close">&times;</span>
+        <h2>Contact form</h2>
+        <form id="contact-form">
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="firstname"
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="lastname"
+          />
+          <input type="email" name="email" id="email" placeholder="email" />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+            placeholder="Please write your message..."
+          ></textarea>
+          <button type="submit">Submit message</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="main__navblock">
+        <h1><span>Explorez</span> Singapour</h1>
+        <nav class="main__nav">
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/Hotels-g294265-Singapore-Hotels.html"
+            target="_blank"
+          >
+            <p>Hotel</p>
+            <i class="fas fa-bed"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/VacationRentals-g294265-Reviews-Singapore-Vacation_Rentals.html"
+            target="_blank"
+          >
+            <p>Location de vacances</p>
+            <i class="fas fa-home"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/Tourism-g294265-Singapore-Vacations.html"
+            target="_blank"
+          >
+            <p>Activités</p>
+            <i class="fas fa-road"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/Restaurants-g294265-Singapore.html"
+            target="_blank"
+          >
+            <p>Restaurants</p>
+            <i class="fas fa-utensils"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/ShowForum-g294265-i1748-Singapore.html"
+            target="_blank"
+          >
+            <p>Forums de voyage</p>
+            <i class="far fa-comments"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/Flights-g294265-Singapore-Cheap_Discount_Airfares.html"
+            target="_blank"
+          >
+            <p>Vols</p>
+            <i class="fas fa-plane"></i>
+          </a>
+          <a
+            class="main__nav--element"
+            href="https://www.tripadvisor.fr/Cruises"
+            target="_blank"
+          >
+            <p>Croisières</p>
+            <i class="fas fa-ship"></i>
+          </a>
+          <a class="main__nav--element">
+            <p>Plus</p>
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </nav>
+      </div>
+      <div class="main__photos">
+        <div class="main__photos--left">
+          <button>
+            <i class="far fa-image"></i><span>Toutes les photos</span>
+          </button>
+          <img src="./assets/img/caption.jpg" alt="boat swimming pool" />
+        </div>
+        <div class="main__photos--right">
+          <img src="./assets/img/caption-market.jpg" alt="market" />
+          <img src="./assets/img/caption-exterior.jpg" alt="exterior" />
+        </div>
+      </div>
+      <nav class="main__location">
+        <p>
+          <a
+            href="https://www.tripadvisor.fr/Tourism-g2-Asia-Vacations.html"
+            target="_blank"
+            >Asie
+          </a>
+          >
+          <a
+            href="https://www.tripadvisor.fr/Tourism-g294265-Singapore-Vacations.html"
+            target="_blank"
+            >Singapour
+          </a>
+          >
+          <a
+            href="https://www.tripadvisor.fr/Tourism-g294265-Singapore-Vacations.html"
+            target="_blank"
+            >Singapour
+          </a>
+        </p>
+        <p>Visiter : Singapour</p>
+      </nav>
+      <div class="main__description">
+        <div class="main__description--left">
+          <span
+            >La « ville du lion » est peut-être petite de taille, mais elle
+            offre de grands délices</span
+          >
+          <p>
+            Cette minuscule cité-État insulaire est un univers de fusions et de
+            contrastes qui regorge de merveilles à explorer. Des parcs paisibles
+            y côtoient des gratte-ciel futuristes et des centres commerciaux de
+            luxe. La cuisine de rue florissante et des restaurants de classe
+            mondiale offrent d’innombrables façons de déguster et d’explorer le
+            melting-pot culinaire de Singapour. Votre premier voyage à Singapour
+            vous prouvera que parfois les meilleures choses se présentent sous
+            forme de petits paquets.
+          </p>
+        </div>
+        <div class="main__description--right"></div>
+      </div>
+      <!-- Se divertir -->
+      <section class="main__caroussel">
+        <h2>Singapour : les immanquables</h2>
+        <div class="caroussel">
+          <div class="caroussel--description">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques à Singapour.
+            </p>
+            <a
+              href="https://www.tripadvisor.fr/Attractions-g294265-Activities-Singapore.html"
+              target="_blank"
+              >Tout afficher</a
+            >
+          </div>
+
+          <div class="caroussel--items">
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/west-coast-park.jpg"
+                  alt="west coast park"
+                />
+                <i class="far fa-heart"></i>
+                <img
+                  class="trip-logo"
+                  src="./assets/img/logo.svg"
+                  alt="tripadvisor logo"
+                />
+              </div>
+
+              <h4>East Coast Park</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+
+                <p>1 217</p>
+              </div>
+              <p>Plages, Parcs</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/beautiful-botanic-gardens.jpg"
+                  alt="botanic garden"
+                />
+                <i class="far fa-heart"></i>
+                <img
+                  class="trip-logo"
+                  src="./assets/img/logo.svg"
+                  alt="tripadvisor logo"
+                />
+              </div>
+
+              <h4>Jardin Botanique de Singapour</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+                <p>19 819</p>
+              </div>
+              <p>Jardins, Parcs</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/night-view-of-the-hsbc.jpg"
+                  alt="west coast park"
+                /><i class="far fa-heart"></i>
+                <img
+                  class="trip-logo"
+                  src="./assets/img/logo.svg"
+                  alt="tripadvisor logo"
+                />
+              </div>
+
+              <h4>Jewel Changi Airport</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                </div>
+                <p>1 166</p>
+              </div>
+              <p>Centres commerciaux, Vêtements et accessoires</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img src="./assets/img/captioni.jpg" alt="west coast park" />
+                <i class="far fa-heart"></i>
+                <img
+                  class="trip-logo"
+                  src="./assets/img/logo.svg"
+                  alt="tripadvisor logo"
+                />
+              </div>
+              <h4>Promenade TreeTop au réservoir MacRitchie</h4>
+              <div class="rating"></div>
+              <p>Parc</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/night-view-of-the-hsbc.jpg"
+                  alt="west coast park"
+                />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>Jewel Changi Airport</h4>
+              <div class="rating">
+                <img />
+                <p>1 166</p>
+              </div>
+              <p>Centres commerciaux, Vêtements et accessoires</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Se reposer -->
+      <section class="main__caroussel">
+        <div class="caroussel">
+          <div class="caroussel--description">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de symboles et de modernité.</p>
+            <a
+              href="https://www.tripadvisor.fr/Hotels-g294265-Singapore-Hotels.html"
+              target="_blank"
+              >Tout afficher</a
+            >
+          </div>
+
+          <div class="caroussel--items">
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/full-hotel-facade.jpg"
+                  alt="west coast park"
+                />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>Raffles Hotel Singapore</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+                <p>5 131</p>
+              </div>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img src="./assets/img/lobby.jpg" alt="lobby" />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>Shangri-La Sinagapore</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                </div>
+                <p>7 035</p>
+              </div>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/the-fullerton-bay-hotel.jpg"
+                  alt="fullterton bay lobby"
+                /><i class="far fa-heart"></i>
+              </div>
+              <h4>The Fullerton Bay Hotel Singapore</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+                <p>4 545</p>
+              </div>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img src="./assets/img/exterior.jpg" alt="marina bay sands" />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>Marina Bay Sands</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                </div>
+                <p>29 384</p>
+              </div>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/the-warehouse-hotel.jpg "
+                  alt="warehouse hotel"
+                />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>The Warehouse Hotel</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+                <p>355</p>
+              </div>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/lobby-entrance.jpg "
+                  alt="warehouse hotel"
+                />
+                <i class="far fa-heart"></i>
+              </div>
+              <h4>Ann Siang House, The Unlimited Collection by Oakwood</h4>
+              <div class="rating">
+                <div class="rating--circles">
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                  <i class="far fa-circle"></i>
+                </div>
+                <p>140</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Se restaurer -->
+      <section class="main__caroussel">
+        <div class="caroussel">
+          <div class="caroussel--description">
+            <h3>Se restaurer</h3>
+            <p>Des restaurants et bars typiques, et plus encore à Singapour.</p>
+            <a
+              href="https://www.tripadvisor.fr/Restaurants-g294265-Singapore.html"
+              target="_blank"
+              >Tout afficher</a
+            >
+          </div>
+
+          <div class="caroussel--items">
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/quadruple-banquette.jpg"
+                  alt="west coast park"
+                />
+                <i class="far fa-heart"></i>
+                <img
+                  class="trip-logo"
+                  src="./assets/img/logo.svg"
+                  alt="tripadvisor logo"
+                />
+              </div>
+              <button class="michelin">
+                <img src="./assets/img/3-Stars.svg" alt="3 stars" /><span
+                  >MICHELIN</span
+                >
+              </button>
+              <h4>Odette</h4>
+              <div class="rating">
+                <img />
+                <p>445</p>
+              </div>
+              <p class="restaurant-description">
+                €€€€ • Française, Européenne, Végétariens bienvenus
+              </p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img src="./assets/img/jaan.jpg" alt="botanic garden" />
+                <i class="far fa-heart"></i>
+              </div>
+              <button class="michelin">
+                <img src="./assets/img/2-Stars.svg" alt="2 stars" /><span
+                  >MICHELIN</span
+                >
+              </button>
+              <h4>JAAN by Kirk Westaway</h4>
+              <div class="rating">
+                <img />
+                <p>764</p>
+              </div>
+              <p>€€€€ • Britannique, Moderne, Végétariens bienvenus</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/small-plates.jpg"
+                  alt="west coast park"
+                /><i class="far fa-heart"></i>
+              </div>
+              <button class="michelin">
+                <img src="./assets/img/1-Star.svg" alt="2 stars" /><span
+                  >MICHELIN</span
+                >
+              </button>
+              <h4>Burnt Ends</h4>
+              <div class="rating">
+                <img />
+                <p>636</p>
+              </div>
+              <p>€€€€ • Barbecue/Grillades</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img
+                  src="./assets/img/keng-eng-kee-seafood.jpg"
+                  alt="west coast park"
+                />
+                <i class="far fa-heart"></i>
+              </div>
+              <button class="michelin">
+                <img src="./assets/img/Assiette.svg" alt="dish" /><span
+                  >MICHELIN</span
+                >
+              </button>
+              <h4>Imperial Treasure Super Peking Duck Restaurant</h4>
+              <div class="rating">
+                <img />
+                <p>161</p>
+              </div>
+              <p>€€-€€€ • Chinoise, Fruits de mer & Poisson, Asiatique</p>
+            </div>
+            <div class="caroussel--item">
+              <div class="caroussel--image">
+                <img src="./assets/img/photo4jpg.jpg" alt="west coast park" />
+                <i class="far fa-heart"></i>
+              </div>
+              <button class="michelin">
+                <img src="./assets/img/1-Star.svg" alt="one star" /><span
+                  >MICHELIN</span
+                >
+              </button>
+              <h4>Sushi Kimura</h4>
+              <div class="rating">
+                <img />
+                <p>41</p>
+              </div>
+              <p>€€€€ • Japonaise, Sushi, Asiatique</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__caroussel">
+        <h2>Louez un logement pour votre prochaine escapade</h2>
+        <div class="main__sub">
+          <h3>Locations populaires à Singapour</h3>
+          <a
+            href="https://www.tripadvisor.fr/VacationRentals-g294265-Reviews-Singapore-Vacation_Rentals.html"
+            target="_blank"
+            >Tout afficher</a
+          >
+        </div>
+
+        <div class="caroussel--items">
+          <div class="caroussel--item">
+            <img src="./assets/img/a8.jpg" alt="west coast park" />
+            <i class="far fa-heart"></i>
+            <h4>Fortville Serviced Apartments</h4>
+            <div class="rating">
+              <img />
+              <p>2</p>
+            </div>
+            <p>2 couchages • 1 chambre • 1 salle de bain</p>
+          </div>
+          <div class="caroussel--item">
+            <img
+              src="./assets/img/beautiful-botanic-gardens.jpg"
+              alt="botanic garden"
+            />
+            <i class="far fa-heart"></i>
+            <h4>Alocassia Apartments - 1 Bedroom Deluxe - 27</h4>
+            <div class="rating">
+              <img />
+              <p>1</p>
+            </div>
+            <p>2 couchages • 1 chambre • 1 salle de bain</p>
+          </div>
+          <div class="caroussel--item">
+            <img src="./assets/img/7c.jpg" alt="west coast park" /><i
+              class="far fa-heart"
+            ></i>
+            <h4>
+              Super grand studio privé max 4 pax EZS-8 au dernier étage avec
+              piscine commune
+            </h4>
+            <div class="rating">
+              <img />
+              <p>1</p>
+            </div>
+            <p>4 couchages • 1 chambre • 1 salle de bain</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer__left">
+          <div class="credentials">
+            <img
+              src="./assets/img/Tripadvisor_logoset_solid_green.svg"
+              alt="tripadvisor owl"
+            />
+            <div class="credentials--details">
+              <p>© 2022 TripAdvisor LLC Tous droits réservés.</p>
+              <div class="credentials--links">
+                <a
+                  href="https://tripadvisor.mediaroom.com/FR-terms-of-use"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Conditions d'utilisation</a
+                >
+                <a
+                  href="https://tripadvisor.mediaroom.com/fr-privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Confidentialité et utilisation des cookies</a
+                >
+                <a href="https://" target="_blank" rel="noopener noreferrer"
+                  >Accord d'utilisation des cookies</a
+                >
+                <a
+                  href="https://www.tripadvisor.fr/SiteIndex-g294262-Singapore.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Plan du site</a
+                >
+                <a
+                  href="https://www.tripadvisor.fr/pages/service.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Fonctionnement du site</a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="footer__details">
+            Cette version de notre site internet s'adresse aux personnes parlant
+            français en France. Si vous habitez un autre pays ou une autre
+            région, merci de choisir la version de Tripadvisor appropriée pour
+            votre pays ou région dans le menu déroulant.
+          </p>
+        </div>
+        <div class="footer__right">
+          <select
+            name="currency"
+            class="footer__right--input"
+            id="currency-select"
+          >
+            <option value="">€ EUR</option>
+            <option value="dollarsA">$US Dollars américains</option>
+            <option value="dollarsC">$CA Dollars canadiens</option>
+            <option value="francsS">CHF Francs suisses</option>
+            <option value="yensJ">JPY Yens japonais</option>
+            <option value="yensC">CNY Yens chinois</option>
+            <option value="dollarsHK">HKD Dollars de Hong Kong</option>
+          </select>
+
+          <select
+            name="country"
+            class="footer__right--input"
+            id="country-select"
+          >
+            <option value="">France</option>
+            <option value="US">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Mexico">México</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

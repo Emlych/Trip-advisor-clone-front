@@ -6,17 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  submit element
   modalContent.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    try {
+      event.preventDefault();
 
-    const data = {
-      firstname: document.getElementById("firstname").value,
-      lastname: document.getElementById("lastname").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
-    // const response = await axios.get("http://localhost:4000/hello", data);
-    const response = await axios.post("http://localhost:4000/form", data);
-    console.log(response.data);
+      const data = {
+        firstname: document.getElementById("firstname").value,
+        lastname: document.getElementById("lastname").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
+
+      const response = await axios.post(
+        "https://tripadvisor-clone-eld.herokuapp.com/form",
+        data
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log("error message" + error.message);
+      console.log("error response" + error.response);
+    }
   });
 
   //    Open modal with open button
